@@ -54,3 +54,14 @@ Wed Apr 25 21:58:31 2018 , Accuarcy : 0.620000
 Wed Apr 25 22:04:34 2018 , Accuarcy : 0.810000
 Wed Apr 25 22:07:30 2018 , Accuarcy : 0.726000
 Thu Oct  4 20:51:21 2018 , Accuarcy : 0.709000
+Thu Oct  4 21:26:03 2018 , Accuarcy : 0.170000
+Thu Oct  4 22:03:21 2018 , Accuarcy : 0.670000
+Thu Oct  4 22:40:41 2018 , Accuarcy : 0.670000
+Thu Oct  4 23:18:05 2018 , Accuarcy : 0.870000
+Thu Oct  4 23:55:27 2018 , Accuarcy : 0.970000
+Fri Oct  5 00:32:53 2018 , Accuarcy : 0.870000
+Fri Oct  5 01:10:19 2018 , Accuarcy : 0.790000
+Fri Oct  5 01:47:39 2018 , Accuarcy : 0.770000
+Fri Oct  5 02:24:57 2018 , Accuarcy : 0.870000
+Fri Oct  5 03:02:17 2018 , Accuarcy : 0.720000
+Fri Oct  5 03:54:45 2018 , Accuarcy : 0.810600

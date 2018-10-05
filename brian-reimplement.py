@@ -6,9 +6,9 @@ import os
 
 # set_device('cpp_standalone',build_on_run=False)
 
-train_pics = 5000
-test_pics = 20
-test_interval = 100
+train_pics = 10000
+test_pics = 100
+test_interval = 1000
 
 
 class SNN():
@@ -191,17 +191,19 @@ if __name__ == "__main__":
     f.close()
 
     snn = SNN()
-    if(os.path.exists("WEIGHTS_TRAIN_REIM.h5")):
-        snn.load_weight("WEIGHTS_TRAIN_REIM.h5")
-    # for index in range(train_pics):
-    #     snn.train(200, img[index].flatten(), label[index])
-    #     snn.save_weight("WEIGHTS_TRAIN_REIM.h5")
-    #     if(index % 100 == 0):
-    #         start_index = int(np.random.rand(1)[0] * 9900)
-    #         snn.test(test_img[start_index:start_index+test_pics],test_label[start_index:start_index+test_pics])
+    if(os.path.exists("WEIGHTS_TRAIN_FULL.h5")):
+        snn.load_weight("WEIGHTS_TRAIN_FULL.h5")
+    for index in range(train_pics):
+        snn.train(200, img[index].flatten(), label[index])
+    #    snn.save_weight("WEIGHTS_TRAIN_REIM.h5")
+        if(index % test_interval == 0):
+            snn.save_weight("WEIGHTS_TRAIN_FULL.h5")
+            start_index = int(np.random.rand(1)[0] * (10000-test_pics))
+            snn.test(test_img[start_index:start_index+test_pics],test_label[start_index:start_index+test_pics])
 
-    base_index = int(np.random.rand(1)[0] * 9000)
+    # base_index = int(np.random.rand(1)[0] * 9000)
+    base_index = 0
     start_time = time.time()
-    snn.test(test_img[base_index:base_index+1000],test_label[base_index:base_index+1000])
+    snn.test(test_img[base_index:base_index+10000],test_label[base_index:base_index+10000])
     end_time = time.time()
     print("Used Test Time:%f" % (end_time-start_time))
