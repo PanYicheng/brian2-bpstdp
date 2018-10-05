@@ -6,11 +6,11 @@ import numpy as np
 
 
 def save_imgs(imgs, labels, parent_dir):
-    for i in imgs.shape[0]:
+    for i in range(imgs.shape[0]):
         img = imgs[i].astype(np.uint8)
         dir_path = os.path.join(parent_dir, '%s' % labels[i])
         if not os.path.exists(dir_path):
-            os.mkdir(dir_path)
+            os.makedirs(dir_path)
         Image.fromarray(img).save(os.path.join(dir_path, '%s.jpg' % i))
 
 
